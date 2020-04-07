@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B6D973F243D340200B823F1 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D973E243D340200B823F1 /* MoneyViewController.swift */; };
+		0B6D9741243D36AA00B823F1 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D9740243D36AA00B823F1 /* BalanceViewController.swift */; };
+		0B6D9743243D378C00B823F1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D9742243D378C00B823F1 /* DetailViewController.swift */; };
 		0B78DCC9243D2686006E69D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78DCC8243D2686006E69D0 /* AppDelegate.swift */; };
 		0B78DCCB243D2686006E69D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78DCCA243D2686006E69D0 /* SceneDelegate.swift */; };
 		0B78DCCD243D2686006E69D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78DCCC243D2686006E69D0 /* ViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B6D973E243D340200B823F1 /* MoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
+		0B6D9740243D36AA00B823F1 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
+		0B6D9742243D378C00B823F1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0B78DCC5243D2685006E69D0 /* kvolab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kvolab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B78DCC8243D2686006E69D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B78DCCA243D2686006E69D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +67,9 @@
 				0B78DCC8243D2686006E69D0 /* AppDelegate.swift */,
 				0B78DCCA243D2686006E69D0 /* SceneDelegate.swift */,
 				0B78DCCC243D2686006E69D0 /* ViewController.swift */,
+				0B6D973E243D340200B823F1 /* MoneyViewController.swift */,
+				0B6D9740243D36AA00B823F1 /* BalanceViewController.swift */,
+				0B6D9742243D378C00B823F1 /* DetailViewController.swift */,
 				0B78DCCE243D2686006E69D0 /* Main.storyboard */,
 				0B78DCDC243D280D006E69D0 /* User.swift */,
 				0B78DCD1243D2687006E69D0 /* Assets.xcassets */,
@@ -144,7 +153,10 @@
 				0B78DCCD243D2686006E69D0 /* ViewController.swift in Sources */,
 				0B78DCC9243D2686006E69D0 /* AppDelegate.swift in Sources */,
 				0B78DCDD243D280D006E69D0 /* User.swift in Sources */,
+				0B6D9741243D36AA00B823F1 /* BalanceViewController.swift in Sources */,
+				0B6D973F243D340200B823F1 /* MoneyViewController.swift in Sources */,
 				0B78DCCB243D2686006E69D0 /* SceneDelegate.swift in Sources */,
+				0B6D9743243D378C00B823F1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

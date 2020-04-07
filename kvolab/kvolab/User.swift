@@ -32,3 +32,10 @@ class UserObserver {
         kvoToken?.invalidate()
     }
 }
+
+@objc class UsersSingleton: NSObject {
+    @objc dynamic var users = [User]()
+    static let ok = UsersSingleton()
+    private override init () {}
+    
+}

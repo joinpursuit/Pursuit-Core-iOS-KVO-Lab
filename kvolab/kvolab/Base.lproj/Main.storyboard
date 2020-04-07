@@ -10,7 +10,7 @@
         <!--edit-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="kvolab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MoneyViewController" customModule="kvolab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="DyG-mg-h5c" style="IBUITableViewCellStyleDefault" id="ZL9-lg-TjP">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="money cell" textLabel="DyG-mg-h5c" style="IBUITableViewCellStyleDefault" id="ZL9-lg-TjP">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZL9-lg-TjP" id="paj-q2-GAA">
@@ -37,6 +37,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="f5a-m0-Srf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JAZ-Pc-ihZ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -49,6 +53,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="edit" id="yge-8G-m5j"/>
+                    <connections>
+                        <outlet property="tableView" destination="lXh-8z-yNl" id="oUa-gW-wsw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,7 +64,7 @@
         <!--create-->
         <scene sceneID="tKC-tu-TUC">
             <objects>
-                <viewController id="nYm-hG-mLG" sceneMemberID="viewController">
+                <viewController id="nYm-hG-mLG" customClass="ViewController" customModule="kvolab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xe0-JC-8vG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,6 +115,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmG-td-XoF">
                                 <rect key="frame" x="20" y="741" width="374" height="30"/>
                                 <state key="normal" title="now done"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="nYm-hG-mLG" eventType="touchUpInside" id="okZ-P9-SgK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -127,6 +137,10 @@
                         <viewLayoutGuide key="safeArea" id="uqf-c8-3GY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="create" id="hDa-fp-Ir9"/>
+                    <connections>
+                        <outlet property="moneyTextField" destination="d0j-Db-idB" id="Ney-92-rfz"/>
+                        <outlet property="nameTextField" destination="CQY-Xj-uXc" id="2Pw-1O-pwA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9V-hp-7V5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,7 +168,7 @@
         <!--look-->
         <scene sceneID="nHg-XG-9se">
             <objects>
-                <viewController id="vlb-lb-hui" sceneMemberID="viewController">
+                <viewController id="vlb-lb-hui" customClass="BalanceViewController" customModule="kvolab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wz0-aC-iUO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -163,7 +177,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="zZM-8X-NhR" detailTextLabel="2cd-Hh-eSJ" style="IBUITableViewCellStyleSubtitle" id="3f9-1C-KSV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="balance cell" textLabel="zZM-8X-NhR" detailTextLabel="2cd-Hh-eSJ" style="IBUITableViewCellStyleSubtitle" id="3f9-1C-KSV">
                                         <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3f9-1C-KSV" id="gPc-i6-N0o">
@@ -188,6 +202,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vlb-lb-hui" id="LcD-Fj-KSc"/>
+                                    <outlet property="delegate" destination="vlb-lb-hui" id="tPu-zH-2vv"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -200,6 +218,9 @@
                         <viewLayoutGuide key="safeArea" id="wnP-CG-j9y"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="look" id="oe7-hY-lR0"/>
+                    <connections>
+                        <outlet property="tableView" destination="WcM-y4-LKs" id="OYm-KA-AtQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HoL-hY-coV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
