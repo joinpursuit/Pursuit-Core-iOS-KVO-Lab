@@ -15,7 +15,7 @@ class BalanceViewController: UIViewController {
     var usersObserver: NSKeyValueObservation?
     var userObserver: NSKeyValueObservation?
     
-    var users = UsersSingleton.ok.users {
+    var users = [User]() {
         didSet {
             tableView.reloadData()
         }
@@ -27,8 +27,13 @@ class BalanceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadUsers()
         observeUsers()
         
+    }
+    
+    private func loadUsers() {
+        users = UsersSingleton.ok.users
     }
     
     private func observeUsers() {
@@ -38,6 +43,7 @@ class BalanceViewController: UIViewController {
             self.users = users
         })
     }
+
     
 }
 

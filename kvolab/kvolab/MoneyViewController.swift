@@ -43,7 +43,7 @@ class MoneyViewController: UIViewController {
         userObserver = user.observe(\.balance, options: [.old, .new], changeHandler: { (user, change) in
             guard let balance = change.newValue else { return }
             print("Balance changed!")
-            self.users = UsersSingleton.ok.users
+            UsersSingleton.ok.users = self.users
         })
     }
 
